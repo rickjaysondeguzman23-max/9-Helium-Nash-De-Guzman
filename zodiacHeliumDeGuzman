@@ -1,0 +1,25 @@
+def zodiacSign(year):
+    zodiac = (year - 1900) % 12
+    signs = [
+        "Rat (鼠 / Shu)",
+        "Ox (牛 / Niu)",
+        "Tiger (虎 / Hu)",
+        "Rabbit (兔 / Tu)",
+        "Dragon (龙 / Lóng)",
+        "Snake (蛇 / Shé)",
+        "Horse (马 / Mǎ)",
+        "Goat (羊 / Yáng)",
+        "Monkey (猴 / Hóu)",
+        "Rooster (鸡 / Jī)",
+        "Dog (狗 / Gǒu)",
+        "Pig (猪 / Zhū)"
+    ]
+    return signs[zodiac]
+
+
+UserInput = int(input("Enter your birth year: "))
+
+if UserInput < 1900:
+    print("Invalid year, it should not be earlier than 1900")
+else:
+    print("Your Chinese Zodiac Sign is:", zodiacSign(UserInput))
